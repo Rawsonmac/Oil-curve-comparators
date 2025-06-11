@@ -1,0 +1,16 @@
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1578496479763-997aa94f0df9?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
