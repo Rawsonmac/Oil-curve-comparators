@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison & Chart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Compare: {{ date1 }}{% if date2 %} vs {{ date2 }}{% endif %}</h1>
+    <div class="compare-container">
+        <div class="compare-section">{{ table1|safe if table1 else '<p>No data</p>' }}</div>
+        <div class="compare-section">{{ table2|safe if table2 else '<p>No data</p>' }}</div>
+    </div>
+    {% if chart %}
+    <div class="chart-container">
+        <h2>{{ category }} ({{ unit }})</h2>
+        <img src="data:image/png;base64,{{ chart }}" alt="Chart">
+    </div>
+    {% endif %}
+    <a href="/">Back</a>
+</div>
+</body>
+</html>
