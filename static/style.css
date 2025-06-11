@@ -1,0 +1,13 @@
+body {
+    margin: 0; font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    background-size: 600% 600%; animation: moveBG 20s ease infinite;
+    color: white; padding: 20px;
+}
+@keyframes moveBG {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.container {max-width:1000px; margin:auto; background:rgba(0,0,0,0.8); border-radius:10px; padding:20px;}
+.compare-container {display:flex; gap:20px;}
+.compare-section {flex:1; overflow-x:auto; background:white; color:black; padding:10px; border-radius:5px;}
+.compare-section table {width:100%; border-collapse:collapse;}
+.compare-section th, .compare-section td {border:1px solid #ddd; padding:8px; color:black;}
+.chart-container {background:white; padding:10px; margin-top:20px; border-radius:5px; color:black; text-align:center;}

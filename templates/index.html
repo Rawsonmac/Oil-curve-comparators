@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Oil Brokerage Charts</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="container">
+    <h1>Oil Brokerage Data</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="date" name="filedate" required>
+        <input type="password" name="password" required>
+        <button type="submit">Upload</button>
+    </form>
+    <form action="/compare" method="post">
+        <select name="date1" required>
+            <option value="">--Date 1--</option>{% for d in dates %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+        </select>
+        <select name="date2">
+            <option value="">--Date 2--</option>{% for d in dates %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+        </select>
+        <select name="category">
+            <option value="">--Category--</option>{% for c in categories %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+        </select>
+        <select name="unit">
+            <option value="WS">WS</option><option value="C/bbl">C/bbl</option><option value="$/mt">$/mt</option>
+        </select>
+        <button type="submit">Compare & Chart</button>
+    </form>
+</div></body></html>
