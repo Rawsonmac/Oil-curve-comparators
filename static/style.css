@@ -1,0 +1,11 @@
+body {
+    margin: 0; font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    background-size: 600% 600%; animation: moveBG 20s ease infinite;
+    color: white; padding: 20px;
+}
+@keyframes moveBG { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.container{max-width:900px;margin:auto;background:rgba(0,0,0,0.8);border-radius:10px;padding:20px;}
+.compare-container{display:flex;gap:20px;}
+.compare-section{flex:1;overflow-x:auto;background:rgba(255,255,255,0.1);padding:10px;border-radius:5px;color:black;}
+.analysis{background:rgba(255,255,255,0.2);padding:15px;margin-top:20px;border-radius:5px;color:black;}
