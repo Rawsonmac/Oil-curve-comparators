@@ -1,7 +1,0 @@
-<!DOCTYPE html>
-<html><head><title>Results</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head><body>
-<div class="container"><h1>Compare: {{ date1 }}{% if date2 %} vs {{ date2 }}{% endif %}</h1>
-<div class="compare-container"><div class="compare-section">{% if table1 %}{{ table1|safe }}{% else %}<p>No {{ date1 }}</p>{% endif %}</div>
-<div class="compare-section">{% if table2 %}{{ table2|safe }}{% else %}<p>No {{ date2 }}</p>{% endif %}</div></div>
-<div class="analysis"><h2>AI Analysis</h2><p>{{ analysis }}</p></div>
-<a href="/">Back</a></div></body></html>
