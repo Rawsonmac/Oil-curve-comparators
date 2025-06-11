@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oil Brokerage AI Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body><div class="container">
+    <h1>Oil Brokerage Data Viewer</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label>Spreadsheet File:</label><br>
+        <input type="file" name="file" required><br>
+        <label>Assign Date:</label><br>
+        <input type="date" name="filedate" required><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
+        <button type="submit">Upload</button>
+    </form>
+    <form action="/compare" method="post">
+        <label>Select Date 1:</label><br>
+        <select name="date1" required>
+            <option value="">--</option>{% for d in dates %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+        </select><br>
+        <label>Select Date 2 (optional):</label><br>
+        <select name="date2"><option value="">--</option>{% for d in dates %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+        </select><br><br>
+        <button type="submit">Compare & Analyze</button>
+    </form>
+</div></body></html>
